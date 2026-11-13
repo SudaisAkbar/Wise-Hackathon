@@ -1,0 +1,17 @@
+{
+  "name": "ask-wise-voice",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ask Wise: send money hands-free by voice. Hackathon prototype with demo data only.",
+  "workspaces": ["server", "client"],
+  "engines": { "node": ">=18.17" },
+  "scripts": {
+    "start": "npm run start -w server",
+    "dev": "concurrently -n api,web -c magenta,yellow \"npm run dev -w server\" \"npm run dev -w client\"",
+    "build": "npm run build -w client",
+    "test": "npm test -w server"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.7"
+  }
+}
